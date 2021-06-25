@@ -12,31 +12,45 @@
 
     <body>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+        <header class="border">
+            <h1 class="border">Article evaluator</h1>
+            <nav>
+              <a href="index.html">Home</a>
+            </nav>
         </header>
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
+                <form onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Enter your article text here...">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+            <section class="border results__container">
+                <h2 class="border">Results:</h2>
+                <div id="results">
+                  <p class="border" id="results-header">
+                    <span id="form-text">Text entered</span>
+                    <span id="message">Analysis successull</span>
+                  </p>
+                  <table class="border">
+                    <th>Score tag</th>
+                    <th>Subjectivity</th>
+                    <th>Irony</th>
+                    <tr>
+                      <td id="score-tag">score tag</td>
+                      <td id="subjectivity">subjectivity</td>
+                      <td id="irony">irony</td>
+                    </tr>
+                  </table>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <p>This is a footer</p>
+        <footer class="border">
+            <p>&copy Silas Jimmy, 2021</p>
+            <p>All rights reserved</p>
         </footer>
 
     </body>

@@ -1,0 +1,44 @@
+@import "variables";
+
+.border {
+  // border: 1px solid black;
+}
+.results__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  #results-header {
+    display: flex;
+    flex-direction: column;
+
+    #form-text {
+      font-style: italic;
+      background-color: $primary-bg-clr;
+      padding: 0.8em;
+      font-size: 1rem;
+      height: 20px;
+      border-radius: 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  h2 {
+    margin: 0.2em 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+
+    span {
+      margin: 1em;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}

@@ -1,5 +1,24 @@
+@import "variables";
+
 header {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 1em;
+
+    h1 {
+      margin: 0;
+    }
+
+    a {
+      color: $primary-txt-clr;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $accent-clr;
+      }
+    }
 }

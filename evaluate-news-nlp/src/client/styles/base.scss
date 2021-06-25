@@ -1,14 +1,16 @@
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
-}
+    margin: 0;
 
-main {
-    flex: 2;
-}
+    main {
+        flex: 2;
+    }
 
-section {
-    max-width: 800px;
-    margin: 50px auto;
+    section {
+        max-width: 90%;
+        margin: 1em auto;
+    }
 }

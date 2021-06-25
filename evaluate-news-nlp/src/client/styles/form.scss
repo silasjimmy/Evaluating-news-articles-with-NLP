@@ -1,12 +1,42 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
-}
+@import "variables";
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+form {
+    border: 1px solid $form-border-clr;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+
+    input {
+        // width: 100%;
+        // line-height: 16px;
+        margin: 10px 0;
+
+        &[type="text"] {
+          width: 100%;
+          padding: 1em;
+          box-sizing: border-box;
+        }
+
+        &[type="submit"] {
+          padding: 0.5em 0;
+          background-color: $primary-bg-clr;
+          color: $primary-txt-clr;
+          font-weight: bold;
+          font-size: 1rem;
+          text-transform: capitalize;
+          cursor: pointer;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          transition: color .3s ease-in-out,
+                      background-color .3s ease-in-out;
+
+          &:hover {
+            color: $secondary-txt-clr;
+            background-color: $accent-clr;
+          }
+        }
+    }
 }
