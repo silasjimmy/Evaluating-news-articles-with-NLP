@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Article text sentiment analyzer</title>
         <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
@@ -13,7 +14,7 @@
     <body>
 
         <header class="border">
-            <h1 class="border">Article evaluator</h1>
+            <h1 class="border">Analyze your article</h1>
             <nav>
               <a href="index.html">Home</a>
             </nav>
@@ -31,17 +32,17 @@
                 <h2 class="border">Results:</h2>
                 <div id="results">
                   <p class="border" id="results-header">
-                    <span id="form-text">Text entered</span>
-                    <span id="message">Analysis successull</span>
+                    <span id="form-text"></span>
+                    <span id="message"></span>
                   </p>
                   <table class="border">
-                    <th>Score tag</th>
+                    <th>Polarity</th>
                     <th>Subjectivity</th>
                     <th>Irony</th>
                     <tr>
-                      <td id="score-tag">score tag</td>
-                      <td id="subjectivity">subjectivity</td>
-                      <td id="irony">irony</td>
+                      <td id="score-tag"></td>
+                      <td id="subjectivity"></td>
+                      <td id="irony"></td>
                     </tr>
                   </table>
                 </div>

@@ -3,7 +3,8 @@
 footer {
   width: 100%;
   margin: 0;
-  background-color: $primary-bg-clr;
+  background-color: $primary-txt-clr;
+  color: $hover-btn-txt-clr;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -12,13 +12,13 @@ header {
     }
 
     a {
-      color: $primary-txt-clr;
+      color: $accent-clr;
       text-decoration: none;
       font-size: 1.1rem;
       transition: color .2s ease-in-out;
 
       &:hover {
-        color: $accent-clr;
+        color: $hover-clr;
       }
     }
 }

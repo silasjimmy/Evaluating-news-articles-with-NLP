@@ -9,8 +9,6 @@ form {
     padding: 1em;
 
     input {
-        // width: 100%;
-        // line-height: 16px;
         margin: 10px 0;
 
         &[type="text"] {
@@ -21,7 +19,7 @@ form {
 
         &[type="submit"] {
           padding: 0.5em 0;
-          background-color: $primary-bg-clr;
+          background-color: $accent-clr;
           color: $primary-txt-clr;
           font-weight: bold;
           font-size: 1rem;
@@ -34,8 +32,8 @@ form {
                       background-color .3s ease-in-out;
 
           &:hover {
-            color: $secondary-txt-clr;
-            background-color: $accent-clr;
+            color: $hover-btn-txt-clr;
+            background-color: $hover-clr;
           }
         }
     }
