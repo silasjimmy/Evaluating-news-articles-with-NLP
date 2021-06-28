@@ -1,3 +1,4 @@
+// Fetches the results from the NLP API
 const evaluateArticle = async (apiKey, formText) => {
 
   // Create a data object for the fetch operation

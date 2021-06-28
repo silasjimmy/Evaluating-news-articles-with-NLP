@@ -1,3 +1,4 @@
+// Handles the form submission
 function handleSubmit(e) {
     e.preventDefault();
 
@@ -26,10 +27,14 @@ function handleSubmit(e) {
     // Get the text that was put into the form field
     let formText = document.getElementById('name').value
 
-    // Client.checkForName(formText)
+    Client.checkForName(formText)
 
-    // Fetch the api key
-    fetch('http://localhost:8080/getKey')
+    // Get the appropriate url for fetching the api key
+    const url = window.location.href.includes("localhost") ?
+      'http://localhost:8080/' : 'http://127.0.0.1:8080/';
+
+    // Fetch the api key details object
+    fetch(`${url}getKey`)
     .then(response => {
       let data = response.json();
       return data

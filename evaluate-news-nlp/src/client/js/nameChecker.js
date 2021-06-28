@@ -1,3 +1,4 @@
+// Checks for specific names to display the greeting
 function checkForName(inputText) {
     console.log("::: Running checkForName :::", inputText);
     let names = [
