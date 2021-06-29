@@ -27,6 +27,10 @@ function handleSubmit(e) {
     // Get the text that was put into the form field
     let formText = document.getElementById('name').value
 
+    if (Client.checkForName(formText) == false) {
+      alert("Invalid input! Please enter a valid url and try again")
+    }
+
     // Get the appropriate url for fetching the api key
     const url = window.location.href.includes("localhost") ?
       'http://localhost:8080/' : 'http://127.0.0.1:8080/';
