@@ -27,8 +27,6 @@ function handleSubmit(e) {
     // Get the text that was put into the form field
     let formText = document.getElementById('name').value
 
-    Client.checkForName(formText)
-
     // Get the appropriate url for fetching the api key
     const url = window.location.href.includes("localhost") ?
       'http://localhost:8080/' : 'http://127.0.0.1:8080/';
@@ -40,25 +38,19 @@ function handleSubmit(e) {
       return data
     })
     .then(apiDetails => {
-      return Client.evaluateArticle(apiDetails.key, formText)
+      if (Client.checkForName(formText)) {
+        return Client.evaluateArticle(apiDetails.key, formText)
+      }
     })
     .then(data => {
-      resultsContainer.querySelector("#form-text").innerHTML = formText;
-
-      resultsContainer.querySelector("#message").innerHTML =
-        data.status.code === "200" ? data.status.msg : "Analysis successfull!";
-
-      resultsContainer.querySelector("#message").style.color =
-        data.status.code === "200" ? "red" : "green";
-
-      resultsContainer.querySelector("#score-tag").innerHTML =
-        data.status.code === "200" ? "" : polarity[data.score_tag];
-
-      resultsContainer.querySelector("#subjectivity").innerHTML =
-        data.status.code === "200" ? "" : subject[data.subjectivity];
-
-      resultsContainer.querySelector("#irony").innerHTML =
-        data.status.code === "200" ? "" : irony[data.irony];
+      if (data !== undefined) {
+        resultsContainer.querySelector("#form-text").innerHTML = formText;
+        resultsContainer.querySelector("#message").innerHTML = "Analysis successfull!";
+        resultsContainer.querySelector("#message").style.color = "green";
+        resultsContainer.querySelector("#score-tag").innerHTML = polarity[data.score_tag];
+        resultsContainer.querySelector("#subjectivity").innerHTML = subject[data.subjectivity];
+        resultsContainer.querySelector("#irony").innerHTML = irony[data.irony];
+      }
     })
     .catch(error => console.log(error))
 }
